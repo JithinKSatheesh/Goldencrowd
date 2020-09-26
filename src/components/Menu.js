@@ -5,12 +5,12 @@ import { animated, useSpring } from "react-spring";
 
 
 export default function Menu(props) {
-    const [{width,color,opacity_}, setSpringProps] = useSpring(() => ({
+    const [{width,color,opacity_}] = useSpring(() => ({
         width: "100%",
         color:"#141414",
-        from: {  width: "20%",color:"#141414",opacity_:0},
+        from: {  width: "30%",color:"#141414",opacity_:0},
         to:async (next)=>{
-            await next({width:"20%"})
+            await next({width:"30%"})
             await next({width:"10%"})
             await next({width:"100%"})
             await next({opacity_:1})

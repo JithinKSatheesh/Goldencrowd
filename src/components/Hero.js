@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useEffect}from 'react'
 import { useSpring } from 'react-spring'
 
 import HeroImage from './Hero-image'
@@ -9,6 +9,8 @@ import Team from './Team'
 
 import SplashTransition from './SplashTransitionRight'
 
+import parallaxImg from '../assets/parallax.jpg'
+
 
 
 
@@ -17,6 +19,10 @@ const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
 
 export default function Hero() {
     const [props, set] = useSpring(() => ({ st: 0, xy: [0, 0], config: { mass: 10, tension: 550, friction: 140 } }))
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <>
@@ -29,7 +35,7 @@ export default function Hero() {
                 <div className="space-50"></div>
                 <div className="space-50"></div>
                 <div className="space-50"></div>
-                <div className="space-50"></div>
+               
 
                 {/* ======================== */}
 
@@ -44,7 +50,8 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <Parallax/>
+            <div className="h4 text-center code-is-love">#CODEING <span className="text-warning">IS</span>LOVE </div>
+            <Parallax img={parallaxImg}/>
             <Team/>
             <ParallaximageFooter/>
 

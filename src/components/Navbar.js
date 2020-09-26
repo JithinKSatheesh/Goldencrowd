@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import {Link} from 'react-router-dom'
 import { animated, useSpring,useTransition } from "react-spring";
 
+import SplashTransition from './SplashTransitionLeft'
+import SplashTransitionRight from './SplashTransitionRight'
+
 import  Menu from './Menu'
 
 
@@ -17,7 +20,7 @@ export default function Navbar() {
         width: "100%",
         widthMenu: "100%",
         from: {  width: "1%",widthMenu: "1%"},
-        config: { mass: 10, tension: 550, friction: 140 } ,
+        config: { mass: 10, tension: 550, friction: 140 }
     }))
 
     const transitions = useTransition(menuClick, null, {
@@ -29,10 +32,11 @@ export default function Navbar() {
 
     return (
         <>
-            {menuClick?"":""}
             {
                 transitions.map(({ item, key, props }) =>
                 item && <animated.div key={key} style={props} >
+                            <SplashTransitionRight color="#e1e1e1" />
+                            <SplashTransition color="#f8c74c"/>
                             <Menu toggleMenu={setMenuClick} />
                         </animated.div>
                 )

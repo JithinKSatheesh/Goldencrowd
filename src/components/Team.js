@@ -1,4 +1,4 @@
-import React, { useEffect,useState ,useRef } from "react";
+import React, { useEffect ,useRef } from "react";
 import { animated, useSpring } from "react-spring";
 import TeamCodeImg from '../assets/team_code.jpg'
 import jks from '../assets/jks.jpg'
@@ -15,7 +15,7 @@ export default function Team() {
     const calc2 = o => `translateY(${o * 0.02 - 50 }px)`
 
     const ref = useRef()
-    const [{ offset,width }, set] = useSpring(() => ({ 
+    const [{ offset }, set] = useSpring(() => ({ 
         offset: 0 ,
         config: { mass: 5, tension: 350, friction: 40 }
     }))

@@ -31,7 +31,7 @@ export default function Teamimgcard(props) {
                         <animated.div 
                             style={{ width:"1px", height:"20px"}}
                             >
-                            <animated.div src={props.img} style={{  width: springProps.width }} className="team-side-bar"></animated.div>
+                            <animated.div style={{  width: springProps.width ,maxHeight:props.height }} className="team-side-bar"></animated.div>
 
                         </animated.div>
                     )

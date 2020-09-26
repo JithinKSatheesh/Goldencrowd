@@ -72,7 +72,7 @@ a:hover{
 }
 .nav-menu{
   font-size: 1em;
-  
+  transform: translateX(-26px);
 }
 
 .nav-menu-burgar-box{
@@ -103,6 +103,9 @@ a:hover{
 {
   .nav-menu-text{
     display: none;
+  }
+  .nav-menu{
+    transform: translateX(0px);
   }
 }
 
@@ -183,7 +186,7 @@ a:hover{
 /* sidebar */
 /* ========================================================= */
 .sidebar-box{
-  color: #141414;
+  color: #2e2e2e;
   height:200px ;
   text-align: center;
   position: fixed;
@@ -239,7 +242,7 @@ a:hover{
 }
 .parallax-img{
  width: 100%;
- height: 120%;
+ /* height: 120%; */
 
 }
 
@@ -277,7 +280,7 @@ a:hover{
     height: 300px;
   }
   .parallax-img{
-    height: 400px
+    min-height: 400px
   }
 
 }
@@ -348,7 +351,8 @@ a:hover{
 
 .team-side-bar{
   position: absolute;
-  height: 300vh;
+  height: 250vh;
+  max-height: 2000px;
   width: 70%;
   right: 0;
   background-color: rgb(242, 242, 242);
@@ -367,12 +371,88 @@ a:hover{
 }
 /* ********* *******************/
 
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* WHAT WE DO  */
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+
+.what-we-do-big{
+  font-size: 5em;
+}
+
+.what-we-do-med{
+  font-size: 2em;
+}
+
+.wwd-space{
+  width: 100%;
+  height: 200px;
+}
+.wwd-websites-box{
+  height: 0px;
+  width: 0%;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.098);
+  overflow: hidden;
+}
+.wwd-card-translate{
+  height: 200px;
+  width: 100%;
+  transform: translate(-10px,-100px);
+  transition: transform 1s ease-in-out,box-shadow 0.5s ease,height 0.5s ease,width 0.5s ease;
+}
+
+.wwd-websites-box:hover{
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.098);
+}
+.wwd-card-preview{
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 10px 20px 30px 10px rgba(0, 0, 0, 0.098);
+  transition: background-color 1s ease,box-shadow 0.5s ease;
+  cursor: pointer;
+}
+.wwd-card-preview:hover{
+  background-color: #f8c246;
+  box-shadow: 5px 5px 5px 10px rgba(0, 0, 0, 0.098);
+}
+
+@media screen and (max-width:780px){
+  .wwd-websites-box{
+    transform: translate(0px,0px);
+  }
+  .wwd-space{
+    height: 80px;
+  }
+  .what-we-do-big{
+    font-size: 3em;
+  }
+  
+  .what-we-do-med{
+    font-size: 1.3em;
+  }
+}
+
+
+
+
+
+/* ********************************************************************** */
+/* ********************************************************************** */
+/* ********************************************************************** */
+
 
 /* ********* *******************/
 /* footer */
 /* ********* *******************/
 .footer-secondary{
-  height: 400px;
+  height: 300px;
 }
 
 .footer-primary{
@@ -397,17 +477,17 @@ a:hover{
 .menu-link{
   max-width: 300px;
   margin: auto;
-  transition: transform 0.5s ease
+  transition: transform 0.3s ease
 }
 
 .menu-link-underline{
-  margin-top: 10px;
+  margin-top: 20px;
   position: relative;
-  height: 2px;
+  height: 3px;
   width: 0px;
   background-color: #f5db4a;
-  transition: width 0.5s ease-in-out;
-  transform: translateY(-25px);
+  transition: width 0.3s ease-in-out;
+  transform: translateY(-35px);
 }
 
 .menu-link:hover .menu-link-underline{
@@ -415,5 +495,7 @@ a:hover{
 }
 
 .menu-link:hover{
-  transform: scale(1.2);
+  transform: scale(1.5);
+  color: #f8c74c;
+  /* color: #e1e1e1; */
 }

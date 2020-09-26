@@ -9,7 +9,7 @@ import Sidebar from './components/Sidebar'
 
 import Hero from './components/Hero'
 import WhatWeDo from './components/WhatWeDo'
-import Menu from './components/Menu'
+// import Menu from './components/Menu'
 
 
 import Test from './components/Test'

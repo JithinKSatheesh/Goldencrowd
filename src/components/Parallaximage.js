@@ -1,11 +1,10 @@
 import React, { useEffect, useRef } from "react";
 import { animated, useSpring } from "react-spring";
-import parallaxImg from '../assets/parallax.jpg'
 
 
 
 
-export default function Parallaximage () {
+export default function Parallaximage (props) {
 
     const calc = o => `translateY(${o * 0.1 - 50}px)`
     const ref = useRef()
@@ -27,9 +26,8 @@ export default function Parallaximage () {
         return (
             <>
                 <div ref={ref}>
-                    <div className="h4 text-center code-is-love">#CODEING <span className="text-warning">IS</span>LOVE </div>
-                    <div className="parallax-box ">
-                        <animated.img style={{ transform: offset.interpolate(calc) }} className="parallax-img" src={parallaxImg} alt="" />
+                    <div style={{height:props.height,display:props.display}} className="parallax-box">
+                        <animated.img style={{ transform: offset.interpolate(calc) }} className="parallax-img" src={props.img} alt="" />
                     </div>
                 </div>
 

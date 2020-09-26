@@ -58,8 +58,6 @@ export default function Parallaximage () {
                     onTouchStart={()=>{setToggle(state => !state)}}
                     >
                     <div className="space-50"></div>
-                    <div className="space-50"></div>
-                    <div className="space-50"></div>
                     <div className="h4 view-project" 
                         onMouseEnter={()=>{setToggle(true)}} 
                         onMouseLeave={()=>{setToggle(false)}} 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Link, useLocation} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { animated, useSpring } from "react-spring";
 
 
@@ -14,7 +14,7 @@ export default function Sidebar() {
             config: { mass: 20, tension: 650, friction: 100 }
         }))
 
-        const location = useLocation().pathname
+        // const location = useLocation().pathname
 
         return (
             <>  
